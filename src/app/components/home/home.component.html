@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="home.component.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <span><img src="./assets/logo.png" alt="logo" class="logo"></span>
+    <span><a routerLink="/HomeComponent" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></span>
+    <span class="cute">
+      <a class="login" routerLink="/LoginComponent" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+      <a class="signup" routerLink="/RegistrationComponent" routerLinkActive="active" ariaCurrentWhenActive="page">SignUp</a>
+    </span>
+
+    <router-outlet></router-outlet>
+
+    <button class="dark-mode-toggle" (click)="toggleDarkMode()">
+      {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+    </button>
+  </nav>
+  <div class="container" [class.dark-mode]="isDarkMode">
+    <main >
+      <h1>MY To-Do-List </h1>
+      <p>″You can always change your plan, but only if you have one. I’m a big believer in to-do lists.
+        It helps us break life into small steps. I once put “get tenure” on my to-do list. That was naïve. The most
+        useful
+        to-do list breaks tasks into small steps. It’s like when I encourage Logan to clean
+        his room by picking up one thing at a time.″</p>
+      <router-outlet></router-outlet>
+
+    </main>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: wheat;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.navbar span a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar span a:hover {
+  color: #0011ff;
+}
+
+.dark-mode .nav-links li a {
+  color: #ffffff;
+}
+
+.logo {
+  height: 70px;
+  width: 100px;
+}
+
+.dark-mode .logo {
+  color: #fff;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Main Content */
+main {
+  text-align: center;
+  margin: auto 0;
+  padding: 20px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.login{
+  margin-right:5px;
+  border-right: 2px solid black;
+  padding-right: 5px;
+}
+
+.signup{
+  /* background-color: rgb(117, 67, 164); */
+  /* padding: 5px; */
+  /* border-radius: 20px; */
+}
+
+.cute{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 20px;
+  width: 120px;
+  text-align: center;
+}

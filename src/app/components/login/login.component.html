@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.component.css">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-form">
+          <h1>Welcome Back!</h1>
+          <p class="subtitle">Please login to your account</p>
+          <form>
+            <div class="input-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+            
+            <div class="additional-links">
+             
+              <p>
+                Don't have an account?<li><a routerLink="/RegistrationComponent" routerLinkActive="active" ariaCurrentWhenActive="page">sign-up</a><router-outlet></router-outlet></li>
+              </p>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Todo List</title>
+    <link rel="stylesheet" href="newhome.component.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List Manager</h1>
+        
+        <!-- Add/Edit Task Form -->
+        <form id="taskForm">
+            <input type="hidden" id="taskId">
+            <input type="text" id="taskTitle" placeholder="Enter task title" required>
+            <textarea id="taskDescription" placeholder="Enter task description"></textarea>
+            <select id="taskPriority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <div class="form-actions">
+                <button type="submit" id="submitTask">Add Task</button>
+                <button type="button" id="cancelEdit" style="display:none;">Cancel</button>
+            </div>
+        </form>
+
+        <!-- Task List -->
+        <div class="task-list-container">
+            <h2>My Tasks</h2>
+            <div id="taskList">
+                <!-- Sample Tasks (would be dynamically populated) -->
+                <div class="task-item" data-id="1">
+                    <div class="task-header">
+                        <h3>Complete Project Proposal</h3>
+                        <span class="priority high">High Priority</span>
+                    </div>
+                    <p>Finish and submit the quarterly project proposal document.</p>
+                    <div class="task-actions">
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="task-item" data-id="2">
+                    <div class="task-header">
+                        <h3>Team Meeting</h3>
+                        <span class="priority medium">Medium Priority</span>
+                    </div>
+                    <p>Prepare weekly team status update presentation.</p>
+                    <div class="task-actions">
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
